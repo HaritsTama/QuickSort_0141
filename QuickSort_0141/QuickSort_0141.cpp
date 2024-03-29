@@ -12,7 +12,7 @@ void input() {
 		cout << "Masukan panjang element array : ";
 		cin >> n;
 
-		if (n > 20)
+		if (n <= 20)
 			break;
 		else
 			cout << "\nMaksimum panjang array adalah 20" << endl;
@@ -97,8 +97,27 @@ void display()
 	{
 		cout << arr[i] << " ";
 	}
-	cout << "\n\nJumlah Perbadingan : " << cmp_count << endl;
+	cout << "\n\nJumlah Perbandingan : " << cmp_count << endl;
 	cout << "Jumlah Pergerakan Data : " << mov_count << endl;
 }
 
+int main()
+{
+	char ch;
 
+	do
+	{
+		input();
+		q_short(0, n - 1);
+		display();
+		cout << "\n\nApakah anda ingin melanjutkan? (y/n) : ";
+		cin >> ch;
+		if (ch == 'n' || ch == 'N')
+			break;
+
+		system("pause");
+		system("cls");
+	} while (true);
+
+	return 0;
+}
