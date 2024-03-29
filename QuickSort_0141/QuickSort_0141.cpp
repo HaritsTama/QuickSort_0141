@@ -31,6 +31,9 @@ void input() {
 //Menukar element pada index x dengan element pada index y
 void swap(int x, int y)
 {
-	
+	int temp = arr[x];
+	arr[x] = arr[y];
+	arr[y] = temp;
+	mov_count++;
 
 }
