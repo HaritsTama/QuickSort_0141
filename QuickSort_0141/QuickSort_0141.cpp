@@ -38,7 +38,7 @@ void swap(int x, int y)
 	mov_count++;
 }
 
-void q_short(int low, int high);
+void q_short(int low, int high)
 {
 	int temp;
 	int pivot, i, j;
@@ -72,5 +72,11 @@ void q_short(int low, int high);
 			//menukar element pada index i dengan element pada index j
 			swap(i, j);
 		}
+	}
+
+	if (low < j) //step 11
+	{
+		//menukar element pivot dengan element index j
+		swap(low, j);
 	}
 }
