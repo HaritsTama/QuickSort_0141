@@ -79,4 +79,15 @@ void q_short(int low, int high)
 		//menukar element pivot dengan element index j
 		swap(low, j);
 	}
+
+	//menukar array bagian kiri
+	q_short(low, j - 1); //step 12
+
+	//menukar array bagian kanan
+	q_short(j + 1, high); // step 13
+}
+
+void display()
+{
+	cout << "\n"
 }
